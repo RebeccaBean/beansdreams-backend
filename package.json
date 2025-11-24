@@ -1,0 +1,38 @@
+{
+  "name": "beansdreams-backend",
+  "version": "1.0.0",
+  "description": "This is the backend for the Bean's Dreams website.  \r It connects the frontend shopping cart to:\r - Google Sheets (order logging)\r - Gmail (order confirmation emails)\r - Printify API (product fulfillment)\r - Printify Webhooks (order status updates)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RebeccaBean/beansdreams-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RebeccaBean/beansdreams-backend/issues"
+  },
+  "homepage": "https://github.com/RebeccaBean/beansdreams-backend#readme",
+  "dependencies": {
+    "@paypal/paypal-server-sdk": "^1.1.0",
+    "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase": "^12.3.0",
+    "firebase-admin": "^13.6.0",
+    "googleapis": "^157.0.0",
+    "node-fetch": "^2.7.0",
+    "nodemailer": "^7.0.5",
+    "paypal-rest-sdk": "^1.8.1"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
