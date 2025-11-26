@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/RebeccaBean/beansdreams-backend#readme",
   "dependencies": {
+    "@google-cloud/storage": "^7.17.3",
     "@paypal/paypal-server-sdk": "^1.1.0",
     "axios": "^1.12.2",
     "body-parser": "^2.2.0",
@@ -28,6 +29,7 @@
     "firebase": "^12.3.0",
     "firebase-admin": "^13.6.0",
     "googleapis": "^157.0.0",
+    "multer": "^2.0.2",
     "node-fetch": "^2.7.0",
     "nodemailer": "^7.0.5",
     "paypal-rest-sdk": "^1.8.1"
