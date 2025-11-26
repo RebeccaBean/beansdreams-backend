@@ -1,10 +1,16 @@
 import fs from "fs";
 
-// Read your service account JSON file
-const serviceAccount = JSON.parse(fs.readFileSync("serviceAccount.json", "utf8"));
+// Read your downloaded serviceAccount.json
+const raw = fs.readFileSync("./serviceAccount.json", "utf8");
+const json = JSON.parse(raw);
 
 // Escape newlines in the private key
-serviceAccount.private_key = serviceAccount.private_key.replace(/\n/g, "\\n");
+json.private_key = json.private_key.replace(/\n/g, "\\n");
 
-// Print the .env line
-console.log("FIREBASE_SERVICE_ACCOUNT_KEY=" + JSON.stringify(serviceAccount));
+// Convert to one-line JSON string
+const envValue = JSON.stringify(json);
+
+// Write to .env file
+fs.writeFileSync(".env", `FIREBASE_CONFIG='${envValue}'\n`);
+
+console.log("✅ .env file updated with FIREBASE_CONFIG");
